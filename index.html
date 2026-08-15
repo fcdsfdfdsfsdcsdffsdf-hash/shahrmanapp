@@ -1,17 +1,25 @@
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
 
     <meta name="description"
-          content="شهر من؛ دسترسی ساده و سریع به تاکسی، آگهی‌ها، کسب‌وکارها و خدمات شهری.">
+          content="شهر من؛ دسترسی سریع و ساده به خدمات شهری، تاکسی، آگهی‌ها و کسب‌وکارهای محلی.">
 
-    <meta name="theme-color" content="#0b1220">
+    <meta name="theme-color"
+          content="#2563eb">
 
     <title>شهر من | خدمات شهری</title>
 
     <style>
+
+        /* =========================
+           RESET
+        ========================= */
 
         * {
             margin: 0;
@@ -24,11 +32,20 @@
         }
 
         body {
-            font-family: Tahoma, Arial, sans-serif;
+            font-family:
+                Tahoma,
+                Arial,
+                sans-serif;
+
             background: #f8fafc;
             color: #0f172a;
+
             line-height: 1.8;
-            overflow-x: hidden;
+        }
+
+        button,
+        a {
+            font-family: inherit;
         }
 
         a {
@@ -36,20 +53,14 @@
             color: inherit;
         }
 
-        button {
-            font-family: inherit;
-        }
+        /* =========================
+           CONTAINER
+        ========================= */
 
-        :root {
-            --primary: #2563eb;
-            --primary-dark: #1d4ed8;
-            --dark: #0b1220;
-            --text: #0f172a;
-            --muted: #64748b;
-            --border: #e2e8f0;
-            --white: #ffffff;
+        .container {
+            width: min(1150px, 92%);
+            margin: auto;
         }
-
 
         /* =========================
            HEADER
@@ -60,27 +71,26 @@
             top: 0;
             z-index: 1000;
 
-            background: rgba(255,255,255,.9);
-            backdrop-filter: blur(16px);
+            background: rgba(255,255,255,.92);
+            backdrop-filter: blur(15px);
 
-            border-bottom: 1px solid var(--border);
+            border-bottom: 1px solid #e2e8f0;
         }
 
         .nav {
-            width: min(1180px, 92%);
             min-height: 72px;
-            margin: auto;
 
             display: flex;
             align-items: center;
             justify-content: space-between;
+
             gap: 20px;
         }
 
         .logo {
             display: flex;
             align-items: center;
-            gap: 11px;
+            gap: 10px;
 
             font-size: 20px;
             font-weight: 900;
@@ -96,25 +106,27 @@
 
             border-radius: 14px;
 
-            color: white;
-
             background: linear-gradient(
                 135deg,
                 #2563eb,
-                #1d4ed8
+                #4f46e5
             );
 
+            color: white;
+
             box-shadow:
-                0 8px 22px rgba(37,99,235,.25);
+                0 8px 25px rgba(37,99,235,.25);
         }
 
         .nav-links {
             display: flex;
             align-items: center;
-            gap: 26px;
+            gap: 28px;
 
-            color: #475569;
+            color: #64748b;
+
             font-size: 14px;
+            font-weight: 600;
         }
 
         .nav-links a {
@@ -122,92 +134,82 @@
         }
 
         .nav-links a:hover {
-            color: var(--primary);
+            color: #2563eb;
         }
 
         .nav-button {
             padding: 10px 17px;
 
-            border-radius: 12px;
+            border-radius: 11px;
 
-            background: var(--dark);
-            color: white !important;
+            background: #2563eb;
+            color: white;
 
-            font-weight: 800;
+            font-size: 13px;
+            font-weight: 700;
+
+            transition: .2s;
         }
 
+        .nav-button:hover {
+            background: #1d4ed8;
+            transform: translateY(-1px);
+        }
 
         /* =========================
            HERO
         ========================= */
 
-        .hero-wrapper {
-            overflow: hidden;
+        .hero {
+            padding: 85px 0 70px;
 
             background:
                 radial-gradient(
                     circle at 15% 20%,
                     rgba(37,99,235,.12),
-                    transparent 30%
+                    transparent 35%
                 ),
-
                 radial-gradient(
                     circle at 85% 30%,
-                    rgba(14,165,233,.10),
-                    transparent 28%
+                    rgba(79,70,229,.10),
+                    transparent 35%
                 );
         }
 
-        .hero {
-            width: min(1180px, 92%);
-            min-height: 670px;
-            margin: auto;
-
+        .hero-grid {
             display: grid;
-            grid-template-columns: 1.05fr .95fr;
+
+            grid-template-columns:
+                1.05fr
+                .95fr;
 
             align-items: center;
-            gap: 70px;
-        }
 
-        .hero-content {
-            position: relative;
-            z-index: 2;
+            gap: 70px;
         }
 
         .badge {
             display: inline-flex;
             align-items: center;
-            gap: 9px;
 
-            padding: 8px 14px;
+            padding: 7px 13px;
 
-            margin-bottom: 22px;
+            margin-bottom: 20px;
 
-            border: 1px solid #dbeafe;
-            border-radius: 999px;
+            border-radius: 50px;
 
             background: #eff6ff;
-            color: #1d4ed8;
+            color: #2563eb;
+
+            border: 1px solid #dbeafe;
 
             font-size: 13px;
-            font-weight: 800;
-        }
-
-        .badge-dot {
-            width: 8px;
-            height: 8px;
-
-            border-radius: 50%;
-
-            background: #22c55e;
-
-            box-shadow:
-                0 0 0 5px rgba(34,197,94,.12);
+            font-weight: 700;
         }
 
         .hero h1 {
-            font-size: clamp(42px, 6vw, 72px);
+            font-size: clamp(38px, 6vw, 67px);
+
             line-height: 1.25;
 
             letter-spacing: -1px;
@@ -216,92 +218,64 @@
         }
 
         .hero h1 span {
-            display: block;
-            color: var(--primary);
+            color: #2563eb;
         }
 
         .hero-description {
             max-width: 620px;
 
-            color: var(--muted);
+            color: #64748b;
 
             font-size: 18px;
 
-            margin-bottom: 32px;
+            margin-bottom: 30px;
         }
 
-        .hero-buttons {
+        .hero-actions {
             display: flex;
             flex-wrap: wrap;
-            gap: 12px;
 
-            margin-bottom: 32px;
+            gap: 12px;
         }
 
         .btn {
             border: none;
-            cursor: pointer;
-
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            gap: 8px;
 
             padding: 14px 22px;
 
-            border-radius: 14px;
+            border-radius: 13px;
 
-            font-size: 15px;
+            cursor: pointer;
+
+            font-size: 14px;
             font-weight: 800;
 
             transition: .2s;
         }
 
-        .btn:hover {
-            transform: translateY(-2px);
-        }
-
         .btn-primary {
-            background:
-                linear-gradient(
-                    135deg,
-                    #2563eb,
-                    #1d4ed8
-                );
-
+            background: #2563eb;
             color: white;
 
             box-shadow:
-                0 12px 28px rgba(37,99,235,.25);
+                0 12px 30px rgba(37,99,235,.25);
+        }
+
+        .btn-primary:hover {
+            background: #1d4ed8;
+            transform: translateY(-2px);
         }
 
         .btn-secondary {
             background: white;
-            color: var(--text);
+            color: #0f172a;
 
-            border: 1px solid var(--border);
+            border: 1px solid #cbd5e1;
         }
 
-        .hero-trust {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
-
-            color: #64748b;
-            font-size: 13px;
+        .btn-secondary:hover {
+            background: #f1f5f9;
         }
-
-        .trust-item {
-            display: flex;
-            align-items: center;
-            gap: 7px;
-        }
-
-        .trust-check {
-            color: #16a34a;
-            font-weight: 900;
-        }
-
 
         /* =========================
            HERO PANEL
@@ -310,51 +284,24 @@
         .hero-panel {
             position: relative;
 
-            padding: 25px;
+            padding: 28px;
+
+            background: white;
+
+            border: 1px solid #e2e8f0;
 
             border-radius: 30px;
 
-            background:
-                linear-gradient(
-                    145deg,
-                    #111827,
-                    #0b1220
-                );
-
             box-shadow:
-                0 35px 90px rgba(15,23,42,.2);
-
-            overflow: hidden;
+                0 30px 80px rgba(15,23,42,.10);
         }
 
-        .hero-panel::before {
-            content: "";
-
-            position: absolute;
-
-            width: 240px;
-            height: 240px;
-
-            top: -100px;
-            left: -80px;
-
-            border-radius: 50%;
-
-            background: rgba(37,99,235,.25);
-
-            filter: blur(5px);
-        }
-
-        .panel-top {
-            position: relative;
-
+        .panel-header {
             display: flex;
-            align-items: center;
             justify-content: space-between;
+            align-items: center;
 
             margin-bottom: 22px;
-
-            color: white;
         }
 
         .panel-title {
@@ -362,172 +309,186 @@
             font-weight: 900;
         }
 
-        .panel-status {
-            padding: 5px 10px;
+        .status {
+            display: flex;
+            align-items: center;
+            gap: 6px;
 
-            border-radius: 999px;
+            color: #16a34a;
 
-            background: rgba(34,197,94,.13);
-            color: #86efac;
-
-            font-size: 11px;
-        }
-
-        .city-box {
-            position: relative;
-
-            padding: 20px;
-
-            margin-bottom: 12px;
-
-            border-radius: 20px;
-
-            background: rgba(255,255,255,.06);
-
-            border: 1px solid rgba(255,255,255,.08);
-        }
-
-        .city-box-label {
-            color: #94a3b8;
             font-size: 12px;
+            font-weight: 700;
         }
 
-        .city-box strong {
-            color: white;
-            font-size: 17px;
-        }
+        .status-dot {
+            width: 8px;
+            height: 8px;
 
-        .service-list {
-            position: relative;
+            border-radius: 50%;
 
-            display: grid;
-            gap: 10px;
+            background: #22c55e;
         }
 
         .service-item {
             display: flex;
             align-items: center;
-            gap: 13px;
 
-            padding: 13px;
+            gap: 14px;
+
+            padding: 16px;
+
+            margin-top: 11px;
 
             border-radius: 17px;
 
-            background: rgba(255,255,255,.07);
+            background: #f8fafc;
 
-            border: 1px solid rgba(255,255,255,.08);
-
-            color: white;
-
-            cursor: pointer;
+            border: 1px solid #e2e8f0;
 
             transition: .2s;
         }
 
         .service-item:hover {
-            background: rgba(255,255,255,.11);
-            transform: translateX(-3px);
+            transform: translateX(-4px);
+
+            border-color: #bfdbfe;
+
+            background: #eff6ff;
         }
 
         .service-icon {
-            width: 43px;
-            height: 43px;
-
-            flex-shrink: 0;
+            width: 48px;
+            height: 48px;
 
             display: flex;
             align-items: center;
             justify-content: center;
 
-            border-radius: 13px;
+            flex-shrink: 0;
 
-            background: rgba(37,99,235,.18);
+            border-radius: 14px;
 
-            font-size: 20px;
+            background: #dbeafe;
+
+            font-size: 22px;
         }
 
-        .service-info strong {
+        .service-item strong {
             display: block;
-            font-size: 14px;
+
+            font-size: 15px;
         }
 
-        .service-info small {
-            color: #94a3b8;
-            font-size: 11px;
-        }
+        .service-item small {
+            color: #64748b;
 
+            font-size: 12px;
+        }
 
         /* =========================
-           SECTIONS
+           STATS
+        ========================= */
+
+        .stats {
+            padding: 20px 0 60px;
+        }
+
+        .stats-grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 15px;
+        }
+
+        .stat {
+            padding: 22px;
+
+            text-align: center;
+
+            background: white;
+
+            border: 1px solid #e2e8f0;
+
+            border-radius: 18px;
+        }
+
+        .stat strong {
+            display: block;
+
+            color: #2563eb;
+
+            font-size: 25px;
+
+            margin-bottom: 3px;
+        }
+
+        .stat span {
+            color: #64748b;
+
+            font-size: 13px;
+        }
+
+        /* =========================
+           SERVICES
         ========================= */
 
         .section {
-            width: min(1180px, 92%);
-            margin: auto;
-
-            padding: 90px 0;
+            padding: 80px 0;
         }
 
-        .section-heading {
-            max-width: 680px;
+        .section-header {
+            max-width: 650px;
 
-            margin: 0 auto 45px;
+            margin: 0 auto 42px;
 
             text-align: center;
         }
 
-        .section-label {
-            color: var(--primary);
+        .section-header h2 {
+            font-size: 34px;
 
-            font-size: 13px;
-            font-weight: 900;
-
-            margin-bottom: 7px;
+            margin-bottom: 10px;
         }
 
-        .section-title {
-            font-size: clamp(28px, 4vw, 40px);
+        .section-header p {
+            color: #64748b;
 
-            line-height: 1.4;
-
-            margin-bottom: 12px;
-        }
-
-        .section-description {
-            color: var(--muted);
             font-size: 15px;
         }
 
-
-        /* =========================
-           SERVICE CARDS
-        ========================= */
-
-        .services-grid {
+        .cards {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
             gap: 20px;
         }
 
-        .service-card {
-            padding: 28px;
+        .card {
+            padding: 27px;
 
             background: white;
 
-            border: 1px solid var(--border);
+            border: 1px solid #e2e8f0;
+
             border-radius: 22px;
 
-            transition: .2s;
+            transition: .25s;
         }
 
-        .service-card:hover {
+        .card:hover {
             transform: translateY(-6px);
 
             box-shadow:
-                0 25px 55px rgba(15,23,42,.09);
+                0 20px 45px rgba(15,23,42,.09);
+
+            border-color: #bfdbfe;
         }
 
-        .service-card-icon {
+        .card-icon {
             width: 55px;
             height: 55px;
 
@@ -541,321 +502,90 @@
 
             background: #eff6ff;
 
-            font-size: 24px;
+            font-size: 25px;
         }
 
-        .service-card h3 {
+        .card h3 {
             font-size: 18px;
+
             margin-bottom: 8px;
         }
 
-        .service-card p {
-            color: var(--muted);
+        .card p {
+            color: #64748b;
+
             font-size: 14px;
         }
 
-        .card-link {
-            display: inline-block;
-
-            margin-top: 18px;
-
-            color: var(--primary);
-
-            font-size: 13px;
-            font-weight: 800;
-        }
-
-
         /* =========================
-           STATS
+           CTA
         ========================= */
 
-        .stats {
-            width: min(1000px, 92%);
-            margin: 10px auto 80px;
+        .cta {
+            margin: 20px auto 80px;
 
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-
-            background: white;
-
-            border: 1px solid var(--border);
-            border-radius: 24px;
-
-            overflow: hidden;
-        }
-
-        .stat {
-            padding: 28px;
+            padding: 55px 30px;
 
             text-align: center;
-
-            border-left: 1px solid var(--border);
-        }
-
-        .stat:last-child {
-            border-left: none;
-        }
-
-        .stat strong {
-            display: block;
-
-            color: var(--primary);
-
-            font-size: 30px;
-            font-weight: 900;
-        }
-
-        .stat span {
-            color: var(--muted);
-            font-size: 13px;
-        }
-
-
-        /* =========================
-           ABOUT
-        ========================= */
-
-        .about {
-            display: grid;
-            grid-template-columns: .9fr 1.1fr;
-
-            align-items: center;
-            gap: 70px;
-        }
-
-        .about-box {
-            min-height: 330px;
-
-            padding: 35px;
-
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-
-            border-radius: 28px;
-
-            background:
-                linear-gradient(
-                    135deg,
-                    #0f172a,
-                    #172554
-                );
-
-            color: white;
-
-            box-shadow:
-                0 30px 70px rgba(15,23,42,.16);
-        }
-
-        .big-icon {
-            font-size: 55px;
-            margin-bottom: 15px;
-        }
-
-        .about-box h3 {
-            font-size: 25px;
-            margin-bottom: 8px;
-        }
-
-        .about-box p {
-            color: #cbd5e1;
-            font-size: 14px;
-        }
-
-        .about-content h2 {
-            font-size: 35px;
-            margin-bottom: 18px;
-        }
-
-        .about-content > p {
-            color: var(--muted);
-            margin-bottom: 25px;
-        }
-
-        .features {
-            display: grid;
-            gap: 13px;
-        }
-
-        .feature {
-            display: flex;
-            align-items: flex-start;
-            gap: 12px;
-        }
-
-        .feature-check {
-            width: 27px;
-            height: 27px;
-
-            flex-shrink: 0;
-
-            display: flex;
-            align-items: center;
-            justify-content: center;
-
-            border-radius: 9px;
-
-            background: #dcfce7;
-            color: #16a34a;
-
-            font-weight: 900;
-        }
-
-        .feature strong {
-            display: block;
-            font-size: 14px;
-        }
-
-        .feature span {
-            color: var(--muted);
-            font-size: 12px;
-        }
-
-
-        /* =========================
-           DOWNLOAD
-        ========================= */
-
-        .download {
-            width: min(1180px, 92%);
-
-            margin: 20px auto 90px;
-
-            padding: 65px 30px;
 
             border-radius: 30px;
 
             background:
                 linear-gradient(
                     135deg,
-                    #0b1220,
-                    #172554
+                    #0f172a,
+                    #1e293b
                 );
 
             color: white;
 
-            text-align: center;
-
-            overflow: hidden;
-            position: relative;
+            box-shadow:
+                0 25px 60px rgba(15,23,42,.18);
         }
 
-        .download::before {
-            content: "";
-
-            position: absolute;
-
-            width: 300px;
-            height: 300px;
-
-            right: -100px;
-            top: -150px;
-
-            border-radius: 50%;
-
-            background: rgba(37,99,235,.18);
-        }
-
-        .download h2 {
-            position: relative;
-
-            font-size: 35px;
+        .cta h2 {
+            font-size: 32px;
 
             margin-bottom: 10px;
         }
 
-        .download p {
-            position: relative;
+        .cta p {
+            color: #cbd5e1;
 
             max-width: 600px;
 
             margin: 0 auto 25px;
-
-            color: #cbd5e1;
-
-            font-size: 14px;
         }
 
-        .download .btn {
-            position: relative;
-
+        .cta .btn {
             background: white;
-            color: var(--dark);
+            color: #0f172a;
         }
-
 
         /* =========================
            FOOTER
         ========================= */
 
         footer {
-            padding: 35px 0;
+            padding: 30px 0;
 
             background: #020617;
 
             color: #cbd5e1;
         }
 
-        .footer-inner {
-            width: min(1180px, 92%);
-            margin: auto;
-
+        .footer-content {
             display: flex;
+
             align-items: center;
             justify-content: space-between;
 
             gap: 20px;
         }
 
-        .footer-brand {
-            font-size: 17px;
-            font-weight: 900;
+        .footer-content small {
+            color: #94a3b8;
         }
-
-        .footer-inner small {
-            color: #64748b;
-        }
-
-
-        /* =========================
-           TOAST
-        ========================= */
-
-        .toast {
-            position: fixed;
-
-            left: 50%;
-            bottom: 25px;
-
-            z-index: 5000;
-
-            width: min(420px, 90%);
-
-            padding: 15px 18px;
-
-            border-radius: 15px;
-
-            background: #0f172a;
-            color: white;
-
-            text-align: center;
-
-            font-size: 13px;
-
-            opacity: 0;
-
-            transform: translate(-50%, 120px);
-
-            transition: .3s;
-        }
-
-        .toast.show {
-            opacity: 1;
-
-            transform: translate(-50%, 0);
-        }
-
 
         /* =========================
            MOBILE
@@ -868,11 +598,13 @@
             }
 
             .hero {
+                padding-top: 55px;
+            }
+
+            .hero-grid {
                 grid-template-columns: 1fr;
 
-                min-height: auto;
-
-                padding: 70px 0;
+                gap: 40px;
             }
 
             .hero-content {
@@ -884,94 +616,49 @@
                 margin-right: auto;
             }
 
-            .hero-buttons,
-            .hero-trust {
+            .hero-actions {
                 justify-content: center;
             }
 
-            .services-grid {
+            .cards {
                 grid-template-columns: 1fr;
             }
 
-            .about {
-                grid-template-columns: 1fr;
-            }
-
-            .stats {
-                grid-template-columns: 1fr;
-            }
-
-            .stat {
-                border-left: none;
-                border-bottom: 1px solid var(--border);
-            }
-
-            .stat:last-child {
-                border-bottom: none;
-            }
-
-            .footer-inner {
-                flex-direction: column;
-                text-align: center;
-            }
         }
 
-
-        @media (max-width: 500px) {
-
-            .nav {
-                min-height: 64px;
-            }
-
-            .logo {
-                font-size: 17px;
-            }
-
-            .logo-icon {
-                width: 38px;
-                height: 38px;
-            }
+        @media (max-width: 550px) {
 
             .nav-button {
-                padding: 8px 12px;
-                font-size: 12px;
-            }
-
-            .hero {
-                padding-top: 55px;
+                display: none;
             }
 
             .hero h1 {
-                font-size: 41px;
+                font-size: 40px;
             }
 
             .hero-description {
-                font-size: 15px;
+                font-size: 16px;
             }
 
-            .hero-buttons {
-                flex-direction: column;
-            }
-
-            .hero-buttons .btn {
-                width: 100%;
-            }
-
-            .hero-panel {
-                padding: 18px;
+            .stats-grid {
+                grid-template-columns: 1fr;
             }
 
             .section {
-                padding: 65px 0;
+                padding: 60px 0;
             }
 
-            .download {
-                padding: 50px 20px;
+            .section-header h2,
+            .cta h2 {
+                font-size: 27px;
             }
 
-            .download h2 {
-                font-size: 28px;
+            .footer-content {
+                flex-direction: column;
+
+                text-align: center;
             }
+
         }
 
     </style>
@@ -987,7 +674,7 @@
 
 <header>
 
-    <nav class="nav">
+    <div class="container nav">
 
         <a href="#" class="logo">
 
@@ -1002,316 +689,274 @@
         </a>
 
 
-        <div class="nav-links">
+        <nav class="nav-links">
 
             <a href="#services">
                 خدمات
             </a>
 
             <a href="#about">
-                درباره شهر من
+                درباره ما
             </a>
 
             <a href="#download">
                 اپلیکیشن
             </a>
 
-            <a
-                href="#services"
-                class="nav-button">
+        </nav>
 
-                شروع کنید
 
-            </a>
+        <a
+            href="#download"
+            class="nav-button">
 
-        </div>
+            شروع کنید
 
-    </nav>
+        </a>
+
+    </div>
 
 </header>
 
 
-
-<!-- =========================
-     MAIN
-========================= -->
-
 <main>
 
 
-    <!-- HERO -->
+<!-- =========================
+     HERO
+========================= -->
 
-    <section class="hero-wrapper">
+<section class="hero">
 
-        <div class="hero">
-
-
-            <div class="hero-content">
-
-                <div class="badge">
-
-                    <span class="badge-dot"></span>
-
-                    خدمات شهری، ساده و سریع
-
-                </div>
+    <div class="container hero-grid">
 
 
-                <h1>
+        <div class="hero-content">
 
-                    شهر شما،
-
-                    <span>
-                        یک قدم ساده‌تر
-                    </span>
-
-                </h1>
-
-
-                <p class="hero-description">
-
-                    «شهر من» برای دسترسی سریع‌تر شهروندان
-                    به خدمات شهری، تاکسی، آگهی‌ها و
-                    کسب‌وکارهای محلی طراحی شده است.
-
-                </p>
-
-
-                <div class="hero-buttons">
-
-                    <button
-                        class="btn btn-primary"
-                        onclick="requestTaxi()">
-
-                        🚕
-                        درخواست تاکسی
-
-                    </button>
-
-
-                    <a
-                        href="#services"
-                        class="btn btn-secondary">
-
-                        مشاهده خدمات
-                        ←
-
-                    </a>
-
-                </div>
-
-
-                <div class="hero-trust">
-
-                    <div class="trust-item">
-
-                        <span class="trust-check">
-                            ✓
-                        </span>
-
-                        ساده و کاربردی
-
-                    </div>
-
-
-                    <div class="trust-item">
-
-                        <span class="trust-check">
-                            ✓
-                        </span>
-
-                        خدمات محلی
-
-                    </div>
-
-
-                    <div class="trust-item">
-
-                        <span class="trust-check">
-                            ✓
-                        </span>
-
-                        دسترسی سریع
-
-                    </div>
-
-                </div>
-
+            <div class="badge">
+                خدمات شهری در یکجا
             </div>
 
 
+            <h1>
 
-            <!-- PANEL -->
+                شهر شما،
+                <br>
 
-            <div class="hero-panel">
+                <span>
+                    ساده‌تر
+                </span>
 
-                <div class="panel-top">
+                و سریع‌تر
 
-                    <div class="panel-title">
-                        خدمات شهر من
-                    </div>
-
-                    <div class="panel-status">
-                        فعال
-                    </div>
-
-                </div>
+            </h1>
 
 
-                <div class="city-box">
+            <p class="hero-description">
 
-                    <div class="city-box-label">
-                        شهر انتخاب‌شده
-                    </div>
+                شهر من بستری ساده برای دسترسی به
+                خدمات شهری، درخواست تاکسی،
+                آگهی‌های محلی و کسب‌وکارهای شهر است.
 
-                    <strong>
-                        شهر شما
-                    </strong>
-
-                </div>
+            </p>
 
 
-                <div class="service-list">
+            <div class="hero-actions">
+
+                <button
+                    class="btn btn-primary"
+                    onclick="requestTaxi()">
+
+                    درخواست تاکسی
+
+                </button>
 
 
-                    <div
-                        class="service-item"
-                        onclick="requestTaxi()">
+                <a
+                    href="#services"
+                    class="btn btn-secondary">
 
-                        <div class="service-icon">
-                            🚕
-                        </div>
+                    مشاهده خدمات
 
-                        <div class="service-info">
-
-                            <strong>
-                                درخواست تاکسی
-                            </strong>
-
-                            <small>
-                                درخواست سریع خودرو
-                            </small>
-
-                        </div>
-
-                    </div>
-
-
-
-                    <div
-                        class="service-item"
-                        onclick="showComingSoon()">
-
-                        <div class="service-icon">
-                            📢
-                        </div>
-
-                        <div class="service-info">
-
-                            <strong>
-                                آگهی‌های شهر
-                            </strong>
-
-                            <small>
-                                خرید، فروش و خدمات محلی
-                            </small>
-
-                        </div>
-
-                    </div>
-
-
-
-                    <div
-                        class="service-item"
-                        onclick="showComingSoon()">
-
-                        <div class="service-icon">
-                            🏪
-                        </div>
-
-                        <div class="service-info">
-
-                            <strong>
-                                کسب‌وکارهای شهر
-                            </strong>
-
-                            <small>
-                                فروشگاه‌ها و خدمات محلی
-                            </small>
-
-                        </div>
-
-                    </div>
-
-
-
-                    <div
-                        class="service-item"
-                        onclick="showComingSoon()">
-
-                        <div class="service-icon">
-                            📰
-                        </div>
-
-                        <div class="service-info">
-
-                            <strong>
-                                اخبار و اطلاع‌رسانی
-                            </strong>
-
-                            <small>
-                                آخرین اخبار شهر
-                            </small>
-
-                        </div>
-
-                    </div>
-
-                </div>
+                </a>
 
             </div>
 
         </div>
 
-    </section>
 
+        <!-- PANEL -->
 
+        <div class="hero-panel">
 
-    <!-- SERVICES -->
+            <div class="panel-header">
 
-    <section
-        class="section"
-        id="services">
+                <div class="panel-title">
+                    خدمات شهر من
+                </div>
 
+                <div class="status">
 
-        <div class="section-heading">
+                    <span class="status-dot"></span>
 
-            <div class="section-label">
-                امکانات
+                    فعال
+
+                </div>
+
             </div>
 
-            <h2 class="section-title">
-                خدمات مورد نیاز شهر شما
+
+            <div class="service-item">
+
+                <div class="service-icon">
+                    🚕
+                </div>
+
+                <div>
+
+                    <strong>
+                        درخواست تاکسی
+                    </strong>
+
+                    <small>
+                        درخواست خودرو در شهر
+                    </small>
+
+                </div>
+
+            </div>
+
+
+            <div class="service-item">
+
+                <div class="service-icon">
+                    📢
+                </div>
+
+                <div>
+
+                    <strong>
+                        آگهی‌های شهر
+                    </strong>
+
+                    <small>
+                        مشاهده آگهی‌های محلی
+                    </small>
+
+                </div>
+
+            </div>
+
+
+            <div class="service-item">
+
+                <div class="service-icon">
+                    🏪
+                </div>
+
+                <div>
+
+                    <strong>
+                        کسب‌وکارهای محلی
+                    </strong>
+
+                    <small>
+                        فروشگاه‌ها و خدمات شهر
+                    </small>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     STATS
+========================= -->
+
+<section class="stats">
+
+    <div class="container stats-grid">
+
+        <div class="stat">
+
+            <strong>
+                ۲۴/۷
+            </strong>
+
+            <span>
+                دسترسی به خدمات
+            </span>
+
+        </div>
+
+
+        <div class="stat">
+
+            <strong>
+                سریع
+            </strong>
+
+            <span>
+                دسترسی آسان
+            </span>
+
+        </div>
+
+
+        <div class="stat">
+
+            <strong>
+                محلی
+            </strong>
+
+            <span>
+                مخصوص شهر شما
+            </span>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     SERVICES
+========================= -->
+
+<section
+    class="section"
+    id="services">
+
+    <div class="container">
+
+        <div class="section-header">
+
+            <h2>
+                خدمات شهر من
             </h2>
 
-            <p class="section-description">
-
-                خدمات محلی را در یک محیط ساده،
-                سریع و قابل استفاده پیدا کنید.
-
+            <p>
+                امکانات اصلی برای ارتباط سریع‌تر
+                شهروندان با خدمات و کسب‌وکارهای محلی.
             </p>
 
         </div>
 
 
+        <div class="cards">
 
-        <div class="services-grid">
 
+            <div class="card">
 
-            <article class="service-card">
-
-                <div class="service-card-icon">
+                <div class="card-icon">
                     🚕
                 </div>
 
@@ -1321,25 +966,16 @@
 
                 <p>
                     درخواست تاکسی را ساده و سریع
-                    ثبت کنید.
+                    ثبت کنید و وضعیت درخواست خود
+                    را پیگیری کنید.
                 </p>
 
-                <a
-                    href="#"
-                    class="card-link"
-                    onclick="requestTaxi(); return false;">
-
-                    درخواست تاکسی ←
-
-                </a>
-
-            </article>
+            </div>
 
 
+            <div class="card">
 
-            <article class="service-card">
-
-                <div class="service-card-icon">
+                <div class="card-icon">
                     📢
                 </div>
 
@@ -1348,26 +984,17 @@
                 </h3>
 
                 <p>
-                    آگهی‌های محلی شهر را مشاهده
-                    و خدمات خود را معرفی کنید.
+                    آگهی‌های محلی را مشاهده کنید
+                    و از اخبار و پیشنهادهای شهر
+                    مطلع شوید.
                 </p>
 
-                <a
-                    href="#"
-                    class="card-link"
-                    onclick="showComingSoon(); return false;">
-
-                    مشاهده آگهی‌ها ←
-
-                </a>
-
-            </article>
+            </div>
 
 
+            <div class="card">
 
-            <article class="service-card">
-
-                <div class="service-card-icon">
+                <div class="card-icon">
                     🏪
                 </div>
 
@@ -1377,290 +1004,73 @@
 
                 <p>
                     فروشگاه‌ها و خدمات مورد نیاز
-                    خود را راحت‌تر پیدا کنید.
+                    خود را در شهر راحت‌تر پیدا کنید.
                 </p>
 
-                <a
-                    href="#"
-                    class="card-link"
-                    onclick="showComingSoon(); return false;">
-
-                    مشاهده کسب‌وکارها ←
-
-                </a>
-
-            </article>
-
-
-
-            <article class="service-card">
-
-                <div class="service-card-icon">
-                    📰
-                </div>
-
-                <h3>
-                    اخبار شهر
-                </h3>
-
-                <p>
-                    اطلاعیه‌ها و اخبار مهم شهر را
-                    دنبال کنید.
-                </p>
-
-                <a
-                    href="#"
-                    class="card-link"
-                    onclick="showComingSoon(); return false;">
-
-                    مشاهده اخبار ←
-
-                </a>
-
-            </article>
-
-
-
-            <article class="service-card">
-
-                <div class="service-card-icon">
-                    ⚡
-                </div>
-
-                <h3>
-                    دسترسی سریع
-                </h3>
-
-                <p>
-                    خدمات پرکاربرد را بدون مراحل
-                    پیچیده در اختیار داشته باشید.
-                </p>
-
-            </article>
-
-
-
-            <article class="service-card">
-
-                <div class="service-card-icon">
-                    📱
-                </div>
-
-                <h3>
-                    اپلیکیشن شهر من
-                </h3>
-
-                <p>
-                    خدمات شهر من را از طریق
-                    اپلیکیشن موبایل استفاده کنید.
-                </p>
-
-                <a
-                    href="#download"
-                    class="card-link">
-
-                    اطلاعات بیشتر ←
-
-                </a>
-
-            </article>
+            </div>
 
 
         </div>
-
-    </section>
-
-
-
-    <!-- STATS -->
-
-    <div class="stats">
-
-
-        <div class="stat">
-
-            <strong>
-                ۴
-            </strong>
-
-            <span>
-                دسته خدمات
-            </span>
-
-        </div>
-
-
-        <div class="stat">
-
-            <strong>
-                ۲۴/۷
-            </strong>
-
-            <span>
-                دسترسی آنلاین
-            </span>
-
-        </div>
-
-
-        <div class="stat">
-
-            <strong>
-                ۱
-            </strong>
-
-            <span>
-                پلتفرم خدمات شهری
-            </span>
-
-        </div>
-
 
     </div>
 
+</section>
 
 
-    <!-- ABOUT -->
+<!-- =========================
+     ABOUT
+========================= -->
 
-    <section
-        class="section"
-        id="about">
+<section
+    class="section"
+    id="about">
 
+    <div class="container">
 
-        <div class="about">
+        <div class="section-header">
 
+            <h2>
+                شهر من چیست؟
+            </h2>
 
-            <div class="about-box">
+            <p>
 
-                <div class="big-icon">
-                    🏙️
-                </div>
+                شهر من با هدف ساده‌تر کردن دسترسی
+                شهروندان به خدمات روزمره شهری
+                طراحی شده است.
 
-                <h3>
-                    برای شهر خودمان
-                </h3>
+                هدف ما این است که خدمات مورد نیاز
+                شما تا حد امکان سریع، ساده و قابل
+                دسترس باشد.
 
-                <p>
-                    شهر من با تمرکز بر نیازهای واقعی
-                    شهروندان و خدمات محلی ساخته می‌شود.
-                </p>
-
-            </div>
-
-
-
-            <div class="about-content">
-
-                <div class="section-label">
-                    درباره شهر من
-                </div>
-
-                <h2>
-                    فناوری باید زندگی را ساده‌تر کند.
-                </h2>
-
-                <p>
-
-                    هدف شهر من این است که شهروند
-                    برای پیدا کردن یک خدمت ساده،
-                    مجبور نباشد بین چندین برنامه
-                    و صفحه مختلف جست‌وجو کند.
-
-                </p>
-
-
-                <div class="features">
-
-
-                    <div class="feature">
-
-                        <div class="feature-check">
-                            ✓
-                        </div>
-
-                        <div>
-
-                            <strong>
-                                طراحی ساده
-                            </strong>
-
-                            <span>
-                                بدون منوهای پیچیده و مراحل غیرضروری.
-                            </span>
-
-                        </div>
-
-                    </div>
-
-
-
-                    <div class="feature">
-
-                        <div class="feature-check">
-                            ✓
-                        </div>
-
-                        <div>
-
-                            <strong>
-                                تمرکز روی شهر
-                            </strong>
-
-                            <span>
-                                امکانات متناسب با نیازهای محلی.
-                            </span>
-
-                        </div>
-
-                    </div>
-
-
-
-                    <div class="feature">
-
-                        <div class="feature-check">
-                            ✓
-                        </div>
-
-                        <div>
-
-                            <strong>
-                                توسعه مرحله‌ای
-                            </strong>
-
-                            <span>
-                                خدمات جدید به‌مرور اضافه خواهند شد.
-                            </span>
-
-                        </div>
-
-                    </div>
-
-
-                </div>
-
-            </div>
+            </p>
 
         </div>
 
-    </section>
+    </div>
+
+</section>
 
 
+<!-- =========================
+     CTA
+========================= -->
 
-    <!-- DOWNLOAD -->
+<section
+    class="container"
+    id="download">
 
-    <section
-        class="download"
-        id="download">
+    <div class="cta">
 
         <h2>
-            شهر من را همراه خود داشته باشید
+            شهر من را تجربه کنید
         </h2>
 
         <p>
 
-            اپلیکیشن شهر من برای دسترسی سریع‌تر
-            به خدمات شهری در حال توسعه است.
+            اپلیکیشن شهر من در حال توسعه است.
+            به‌زودی امکان دریافت و استفاده از
+            اپلیکیشن فراهم خواهد شد.
 
         </p>
 
@@ -1669,27 +1079,29 @@
             class="btn"
             onclick="showComingSoon()">
 
-            📱
-            دریافت اپلیکیشن
+            به‌زودی
 
         </button>
 
-    </section>
+    </div>
+
+</section>
 
 
 </main>
 
 
-
-<!-- FOOTER -->
+<!-- =========================
+     FOOTER
+========================= -->
 
 <footer>
 
-    <div class="footer-inner">
+    <div class="container footer-content">
 
-        <div class="footer-brand">
+        <strong>
             شهر من
-        </div>
+        </strong>
 
         <small>
             © 2026 شهر من — تمامی حقوق محفوظ است.
@@ -1700,44 +1112,12 @@
 </footer>
 
 
-
-<!-- TOAST -->
-
-<div
-    id="toast"
-    class="toast">
-</div>
-
-
-
 <script>
-
-    let toastTimer;
-
-
-    function showToast(message) {
-
-        const toast =
-            document.getElementById("toast");
-
-        toast.textContent = message;
-
-        toast.classList.add("show");
-
-        clearTimeout(toastTimer);
-
-        toastTimer = setTimeout(function () {
-
-            toast.classList.remove("show");
-
-        }, 3000);
-    }
-
 
     function requestTaxi() {
 
-        showToast(
-            "برای ثبت درخواست تاکسی، اپلیکیشن شهر من را باز کنید."
+        alert(
+            "برای درخواست تاکسی، اپلیکیشن شهر من را باز کنید."
         );
 
     }
@@ -1745,8 +1125,8 @@
 
     function showComingSoon() {
 
-        showToast(
-            "این بخش به‌زودی فعال خواهد شد."
+        alert(
+            "اپلیکیشن شهر من به‌زودی در دسترس خواهد بود."
         );
 
     }
@@ -1755,4 +1135,5 @@
 
 
 </body>
+
 </html>
